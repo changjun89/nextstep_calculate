@@ -2,10 +2,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class SplitExpression {
-    private final static String customRegex ="//(.)\n(.*)";
-    private final static String normalRegex =",|:";
+    private final static String customRegex = "//(.)\n(.*)";
+    private final static String normalRegex = ",|:";
 
-    String expr ;
+    String expr;
     int[] result;
 
     public SplitExpression(String expr) {
@@ -15,7 +15,7 @@ public class SplitExpression {
 
     private String[] split() {
         Matcher matcher = Pattern.compile(customRegex).matcher(expr);
-        if(matcher.find()) {
+        if (matcher.find()) {
             return matcher.group(2).split(matcher.group(1));
         }
         return expr.split(normalRegex);
@@ -23,7 +23,7 @@ public class SplitExpression {
 
     private void toInt(String[] nums) {
         result = new int[nums.length];
-        for (int i=0; i < nums.length; i++) {
+        for (int i = 0; i < nums.length; i++) {
             result[i] = Integer.parseInt(nums[i]);
         }
     }

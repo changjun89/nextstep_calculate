@@ -37,9 +37,10 @@ public class CalculatorTest {
         String arg = "1,2:3";
         assertEquals(6, calculator.calcluate(arg));
     }
+
     @Test
     public void 요구사항4() {
-        String arg ="//;\n1;2;3";
+        String arg = "//;\n1;2;3";
         assertEquals(6, calculator.calcluate(arg));
 
     }

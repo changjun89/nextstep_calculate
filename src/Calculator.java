@@ -1,7 +1,7 @@
 public class Calculator {
 
     public int calcluate(String arg) {
-        if(isBlank(arg)) {
+        if (isBlank(arg)) {
             return 0;
         }
         SplitExpression expression = new SplitExpression(arg);
@@ -10,8 +10,8 @@ public class Calculator {
 
 
     private int sum(int[] nums) {
-        int result =0;
-        for(int num : nums) {
+        int result = 0;
+        for (int num : nums) {
             result += num;
         }
         return result;
